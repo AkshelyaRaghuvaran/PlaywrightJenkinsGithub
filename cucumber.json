@@ -1,0 +1,10 @@
+{
+  "default": {
+    "require": ["support/hooks.js", "**/*step.js"],
+    "paths": ["/*.feature"],
+    "format": [
+      "@cucumber/pretty-formatter",
+      "json:reports/cucumberReport/cucumber_report.json"
+    ]
+  }
+}

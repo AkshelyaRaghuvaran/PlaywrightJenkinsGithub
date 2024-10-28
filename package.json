@@ -1,0 +1,39 @@
+{
+  "name": "automation-framework",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test:web": "cucumber-js project_Web/features --exit --format json:reports/webReport/web_report.json",
+    "report:web": "node support/generate-web-report.js",
+    "test:exec:web": "npm run test:web ; npm run report:web ; node support/multipleReport.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.12.12",
+    "allure-commandline": "^2.30.0",
+    "allure-cucumberjs": "^3.0.0-beta.10",
+    "allure-playwright": "^3.0.0-beta.10",
+    "cucumber-html-reporter": "^7.1.1",
+    "cucumberjs-playwright-reporter": "^1.0.14",
+    "eslint": "^9.4.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "playwright": "^1.45.0",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
